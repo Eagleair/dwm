@@ -52,6 +52,6 @@ Mkfile.old
 dkms.conf
 
 # My ignore
-patches/
+#patches/
 config.h
 dwm
