@@ -69,6 +69,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
+static const char *dmenucmdrun[] = { "rofi", "-show", "run", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *screenshotcmd[]  = { "deepin-screenshot", NULL };
 static const char *chromecmd[]  = { "google-chrome-stable", NULL };
@@ -78,6 +79,7 @@ static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, NULL }
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = dmenucmdrun } },
 	{ MODKEY,             			XK_s,	   spawn,          {.v = screenshotcmd } },
 	{ MODKEY,             			XK_g,	   spawn,          {.v = chromecmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
