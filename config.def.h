@@ -10,8 +10,8 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "LiterationMono Nerd Font Mono:size=11" };
-static const char dmenufont[]       = "LiterationMono Nerd Font Mono:size=11";
+static const char *fonts[]          = { "LiterationMono Nerd Font Mono:size=12" };
+static const char dmenufont[]       = "LiterationMono Nerd Font Mono:size=12";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -31,7 +31,8 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+//static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "\ue266", "\uf188", "\ue28b", "\uf044", "\ue7a2", "\uf013", "\uf07a", "\uf0f4", "\uf072" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -51,8 +52,8 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "平铺",      tile },    /* first entry is default */
-	{ "层叠",      NULL },    /* no layout function means floating behavior */
-	{ "覆盖",      monocle },
+	{ "悬浮",      NULL },    /* no layout function means floating behavior */
+	{ "单窗",      monocle },
 };
 
 /* key definitions */
